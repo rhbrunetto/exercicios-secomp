@@ -3,3 +3,4 @@
 *.fdb*
 *.log
 *.synctex.gz
+makefile
