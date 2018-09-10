@@ -1,0 +1,49 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}		% Pacote para usar acentos
+
+
+\begin{document}
+
+% Fazemos com eles:
+% E vamos incrementando. Tudo na mesma tabela.
+
+% 1)
+  \begin{tabular}{c}
+    Bom dia
+  \end{tabular}
+
+% 2) Agora vamos adicionar outra coluna, só que com alinhamento à esquerda
+  \begin{tabular}{cl}
+    Bom dia & Boa noite
+  \end{tabular}
+
+% 3) Agora vamos desenhar o divisor entre as colunas
+  \begin{tabular}{c | l}
+    Bom dia & Boa noite
+  \end{tabular}
+
+% 4) Agora vamos fazer outras linhas
+  \begin{tabular}{c | l}
+    Bom dia & Boa noite \\
+    Boa tarde & % Coluna deixada em branco (explicar que precisa adicionar o &)
+  \end{tabular}
+
+% 5) Agora vamos adicionar uma terceira coluna, com alinhamento à direita
+% Precisamos editar as linhas para ter dois & cada uma (pois o & é o divisor da coluna)
+  \begin{tabular}{c | l | r}
+    Bom dia &  & Boa noite \\
+    Boa tarde & Buenas tardes & Buenas notches
+  \end{tabular}
+  
+% 6) Agora vamos desenhar os divisores horizontais (comando \hline)
+% Pense que é necessário desenhar um divisor logo após uma nova linha da tabela e ao final da tabela
+  \begin{tabular}{c | l | r}
+    \hline  % Adiciona o "teto" da tabela
+	  Bom dia   &               & Boa noite      \\ \hline % Adiciona divisor
+    Boa tarde & Buenas tardes & Buenas notches \\ % Pulamos linha para ir pra baixo
+    \hline % Adiciona o "piso" da tabela
+\end{tabular}
+
+
+\end{document}
