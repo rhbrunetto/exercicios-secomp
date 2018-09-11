@@ -1,0 +1,88 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}		% Pacote para usar acentos
+
+
+\begin{document}
+
+% Fazemos com eles:
+% E vamos incrementando. Tudo na mesma lista.
+% Façam devagar com a galera, sem pressa. Essa parte pode ser meio confusa.
+% Toda vez que terminarmos um passo, vamos mostrando o resultado
+
+Minha lista:
+
+% 1) DICA VALIOSA: Use identação
+\begin{itemize}
+	\item Dragon Ball
+	\item Naruto
+\end{itemize}
+
+% 2) Vamos adicionar um subitem 
+\begin{itemize}
+  \item Dragon Ball
+    \subitem é melhor que
+  \item Naruto
+\end{itemize}
+  
+% 3) Vamos trocar o marcador de um item (igual ao enumerate)
+% Por padrão, o marcador é um símbolo MATEMÁTICO \bullet
+\begin{itemize}
+  \item[a] Dragon Ball
+    \subitem é melhor que
+	\item Naruto
+\end{itemize}
+
+% 4) Vamos adicionar um marcador ao subitem
+% Note que NÃO precisa dos colchetes []
+\begin{itemize}
+  \item[a] Dragon Ball
+    \subitem $\bullet$ é melhor que     % \bullet é o símbolo padrão, e é MATEMÁTICO (por isso os $$)
+	\item Naruto
+\end{itemize}
+
+% 4) Vamos apagar os marcadores que fizemos antes e vamos adicionar um marcador novo à TODOS os itens
+% Primeiro vamos trocar nosso subitem por um itemize (lembre que podemos aninhar eles)
+\begin{itemize}
+  \item Dragon Ball
+  
+    \begin{itemize}
+      \item é
+      \item melhor
+      \item que
+    \end{itemize}
+
+	\item Naruto
+\end{itemize}
+% Mostre como fica.
+
+% Para trocar os marcadores, precisamos REESCREVER o comando de rótulo
+\renewcommand\labelitemi{-} % Estamos trocando o \bullet por um traço simples
+% Perceba o nome do comando: (escreva no quadro se achar melhor)
+  % label (de rótulo)
+  % item (de item - hehehe)
+  % i (de nível I, ou seja, do primeiro nível de itens)
+% Assim, se tivermos itemizes aninhados (um dentro do outro), podemos trocar seus marcadores com
+\renewcommand\labelitemii{.} % Estamos colocando marcador ponto (.) nos \item que estão aninhados no nível II
+
+\begin{itemize}
+  \item Dragon Ball
+
+  \begin{itemize}
+    \item é
+    \item melhor
+    \item que
+  \end{itemize}
+
+	\item Naruto
+\end{itemize}
+
+
+% COMENTÁRIOS IMPORTANTES DE SE FAZER:
+%
+% ESSA NÃO É A ÚNICA FORMA DE TROCAR TODOS OS MARCADORES
+% PODEMOS UTILIZAR O PACOTE enumeritem E FAZER EXATAMENTE COMO FIZEMOS COM O enumerate (VAI FUNCIONAR)
+% EXISTEM OUTROS PACOTES QUE TAMBÉM PERMITEM FAZER ESSE TIPO DE COISA. EX: O PACOTE enumerate (sim, ele tem o mesmo nome do ambiente)
+% NÃO VAMOS MOSTRAR POR FALTA DE TEMPO
+
+\end{document}

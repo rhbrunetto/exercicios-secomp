@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}		% Pacote para usar acentos
+
+% NÃO adicionar ainda, vamos adicionar esse pacote no passo 4)
+\usepackage{enumitem}
+
+
+\begin{document}
+
+% Fazemos com eles:
+% E vamos incrementando. Tudo na mesma lista.
+% Façam devagar com a galera, sem pressa. Essa parte pode ser meio confusa.
+
+Minha lista:
+
+% 1) DICA VALIOSA: Use identação
+\begin{enumerate}
+  \item Dragon Ball
+  \item Naruto
+\end{enumerate}
+
+% 2) Vamos trocar o marcador de um item
+\begin{enumerate}
+  \item[a)] Dragon Ball
+  \item Naruto
+\end{enumerate}
+
+% 3) E se eu quisesse colocar uma seta?
+\begin{enumerate}
+  \item[$\rightarrow$] Dragon Ball      % Isso porque a SETA (comando \rightarrow) é um símbolo do ambiente MATEMÁTICO
+  \item Naruto
+\end{enumerate}
+
+% 4) E se eu quisesse tudo em ordem alfabética?
+% Precisamos de um pacote especial: o pacote enumitem (ADICIONAR NO PREÂMBULO \usepackage{enumitem})
+% Esse pacote sobrescreve o ambiente enumerate original e permite adicionar um parâmetro LABEL entre []
+% Esse parâmetro label NÃO TEM NADA A VER com o \label que usamos para referenciar coisas!!! É só que os caras têm o mesmo nome!
+\begin{enumerate}[label=\alph*] %\alph* é um comando do TeX que gera uma lista contendo o alfabeto (hack estilo python)
+  \item Dragon Ball
+  \item Naruto
+\end{enumerate}
+
+% 5) E se eu quisesse tudo em números romanos?
+% Basta trocar a listagem para a lista dos caracteres romanos
+\begin{enumerate}[label=\roman*]
+  \item Dragon Ball
+  \item Naruto
+\end{enumerate}
+
+% 6) E se eu quisesse tudo em números romanos ENTRE PARÊNTESES?
+% Basta adicionar os parênteses no label
+\begin{enumerate}[label=(\roman*)]
+  \item Dragon Ball
+  \item Naruto
+\end{enumerate}
+
+\end{document}

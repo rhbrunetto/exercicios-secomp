@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}		% Pacote para usar acentos
+
+
+\begin{document}
+
+% Fazemos com eles:
+% E vamos incrementando. Tudo na mesma tabela.
+
+% 1)
+\begin{table}
+  \begin{tabular}{| c | c |}
+    \hline
+    Bom & dia\\
+    \hline
+  \end{tabular}
+\end{table}
+
+% 2) Agora vamos adicionar legenda em cima da tabela
+  \begin{table}
+    \caption{A legenda está em cima}
+    \begin{tabular}{| c | c |}
+      \hline
+      Bom & dia \\
+      \hline
+    \end{tabular}
+  \end{table}
+  
+  % 3) Agora vamos colocar a legenda em baixo da tabela
+  % Pode parecer idiota, mas mostra que realmente o tabular é a tabela em si e o table só serve pra anexar coisas à tabela
+  \begin{table}
+    \begin{tabular}{| c | c |}
+      \hline
+      Bom & dia \\
+      \hline
+    \end{tabular}
+    \caption{Agora está em baixo}
+  \end{table}
+
+  % 3) Agora vamos centralizar tudo isso
+  \begin{table}
+    \centering
+    \begin{tabular}{| c | c |}
+      \hline
+      Bom & dia \\
+      \hline
+    \end{tabular}
+    \caption{Agora está tudo centralizado}
+  \end{table}
+
+
+\end{document}

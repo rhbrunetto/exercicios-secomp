@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}		% Pacote para usar acentos
+
+\usepackage{enumitem}         % Para gerar a ordem alfabética
+
+
+\begin{document}
+
+% Existem várias formas de fazer esse exercício, porém acredito que com o pacote enumitem seja mais fácil
+%
+\begin{enumerate}
+  \item Afazeres de manhã:
+    \begin{enumerate}[label=\alph*.] % Aqui vai ser ordem alfabética. Repare no ponto (.) após o \alph*. É para produzir a. b. c. [...]
+      \item Café
+      \item Ir para aula
+      \item Almoçar no RU;
+    \end{enumerate}
+  \item Afazeres de Tarde
+    \begin{enumerate}[label=\alph*.] % Aqui vai ser ordem alfabética. Repare no ponto (.) após o \alph*. É para produzir a. b. c. [...]
+      \item Assistir mais aulas
+      \item Ir no mercadinho
+      \item Mais aula
+      \item ir para casa
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
