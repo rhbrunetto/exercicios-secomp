@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\usepackage{graphicx}         % Pacote para usar os gráficos
+\usepackage[utf8]{inputenc}		% Pacote para usar acentos
+
+\usepackage{lipsum}           % Pacote para ENCHER LINGUIÇA (é bom mostrar pra galera)
+
+\begin{document}
+
+% Fazemos com eles
+% Tudo sobrescrevendo os passos. Só separei para irmos nos orientando!!!
+
+% 1)
+\section{Minha seção top}
+  Textão do Facebook [...]\\
+  \lipsum[1] % Mostrando o parágrafo 1 do Lorem Ipsum ...
+  
+
+
+
+% 2) Vamos adicionar uma nova seção
+\section{Minha seção top}
+  Textão do Facebook [...]\\
+  \lipsum[1] % Mostrando o parágrafo 1 do Lorem Ipsum ...
+  
+\section{Minha outra seção menos top que a outra}
+  Mais textão\\
+  \lipsum[2] % Mostrando o parágrafo 2 do Lorem Ipsum ...
+
+
+
+
+% 3) Vamos Trocar a ordem das seções e ver o que acontece com a enumeração delas
+\section{Minha outra seção menos top que a outra}
+  Textão do Facebook [...]\\
+  \lipsum[1] % Mostrando o parágrafo 1 do Lorem Ipsum ...
+
+\section{Minha seção top}
+  Mais textão\\
+  \lipsum[2] % Mostrando o parágrafo 2 do Lorem Ipsum ...
+
+
+  % ----------------------------------------------------------------------------- %
+  % FINALIZA AQUI O EXEMPLO DAS SEÇÕES. OS PASSOS 4 E 5 SÃO REFERENTES AO SUMÁRIO %
+  % ----------------------------------------------------------------------------- %
+
+
+% 4) Vamos adicionar um sumário nessa bagunça
+\tableofcontents 
+
+\section{Minha outra seção menos top que a outra}
+  Textão do Facebook [...]\\
+  \lipsum[1] % Mostrando o parágrafo 1 do Lorem Ipsum ...
+
+\section{Minha seção top}
+  Mais textão\\
+  \lipsum[2] % Mostrando o parágrafo 2 do Lorem Ipsum ...
+
+
+
+% 5) Vamos deixar o sumário numa página só dele
+\tableofcontents
+\newpage        % Esse comando cria uma nova página para o conteúdo que está abaixo dele (tipo o quebra de página do Word)
+
+\section{Minha outra seção menos top que a outra}
+  Textão do Facebook [...]\\
+  \lipsum[1] % Mostrando o parágrafo 1 do Lorem Ipsum ...
+
+\section{Minha seção top}
+  Mais textão\\
+  \lipsum[2] % Mostrando o parágrafo 2 do Lorem Ipsum ...
+
+
+
+\end{document}
